@@ -40,25 +40,8 @@ A stunning, modern portfolio website built with Next.js 14, TypeScript, and Tail
 4. **Open your browser:**
    Visit [http://localhost:3000](http://localhost:3000)
 
-## 📝 What's Already Configured
 
-Your portfolio is pre-configured with:
-- **Name:** Francis Lufwendo
-- **Email:** flufwendo@mail.yu.edu
-- **GitHub:** github.com/francium10
-- **LinkedIn:** linkedin.com/in/francis-lufwendo
-- **Projects:** RegComplyAI, Education-24, ESAWAS
 
-## 📁 Files to Add
-
-Add these files to the `public/` folder:
-
-| File | Purpose |
-|------|---------|
-| `resume.pdf` | Your downloadable resume |
-| `projects/regcomplyai.png` | Screenshot of RegComplyAI (1200x675px recommended) |
-| `projects/education24.png` | Screenshot of Education-24 |
-| `projects/esawas.png` | Screenshot of ESAWAS platform |
 
 ## 🌐 Deployment to Vercel
 
