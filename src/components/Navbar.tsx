@@ -70,7 +70,7 @@ export default function Navbar() {
               <Github size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/francis-lufwendo"
+              href="https://www.linkedin.com/in/francis-lufwendo-5a47a8225"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-silver hover:text-accent transition-colors duration-300"
@@ -124,7 +124,7 @@ export default function Navbar() {
               <Github size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/francis-lufwendo"
+              href="https://www.linkedin.com/in/francis-lufwendo-5a47a8225"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-silver hover:text-accent transition-colors"

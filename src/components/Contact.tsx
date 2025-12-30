@@ -27,8 +27,8 @@ export default function Contact() {
   const socials = [
     {
       name: 'Email',
-      value: 'flufwendo@mail.yu.edu',
-      href: 'mailto:flufwendo@mail.yu.edu',
+      value: 'Francis Lufwendo',
+      href: 'mailto:<flufwendo@mail.yu.edu>',
       icon: Mail,
     },
     {
@@ -39,7 +39,7 @@ export default function Contact() {
     },
     {
       name: 'GitHub',
-      value: '@francium10',
+      value: 'francium10',
       href: 'https://github.com/francium10',
       icon: Github,
     },
