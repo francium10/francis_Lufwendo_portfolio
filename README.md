@@ -100,13 +100,6 @@ portfolio/
 - **Icons:** Lucide React
 - **Fonts:** Space Grotesk, DM Sans, JetBrains Mono
 
-## 🤝 Need Help?
 
-If you run into any issues:
-1. Make sure Node.js 18+ is installed
-2. Delete `node_modules` and `package-lock.json`, then run `npm install` again
-3. Clear your browser cache
-
----
 
 Built with ❤️ by Francis Lufwendo
