@@ -59,7 +59,7 @@ export default function Books() {
             Bookshelf
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-ivory mb-4 sm:mb-6">
-            Books That Shaped Me
+            My Favorite Books 
           </h2>
           <p className="text-base sm:text-lg text-silver">
             Reading has been a constant companion through my journey. These books 
