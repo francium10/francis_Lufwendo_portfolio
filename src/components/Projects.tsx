@@ -8,7 +8,7 @@ const projects = [
     description: 'AI-powered FDA regulatory compliance platform for biotech startups. Features document analysis, compliance checking, and regulatory guidance using machine learning.',
     longDescription: 'Built as part of my venture creation coursework, RegComplyAI helps early-stage biotech companies navigate the complex FDA approval process. Implemented RAG pipeline using LangChain and OpenAI to parse 500+ FDA documents, reducing compliance research time by 60%.',
     tech: ['React', 'Node.js', 'Python', 'LangChain', 'OpenAI', 'MongoDB'],
-    image: 'projects/regcomplyai.png',
+    image: '/projects/regcomplyai.png',
     liveUrl: 'https://regcomplyai.org',
     githubUrl: 'https://github.com/francium10/regcomplyai',
     featured: true,
@@ -19,7 +19,7 @@ const projects = [
     description: 'Scholarship management platform that has helped secure over $2M in educational funding for students across Southern Africa. Co-founded nonprofit initiative.',
     longDescription: 'Co-founded initiative providing free college access support to high-achieving, low-income students. Built and maintained full-stack web platform enabling scalable student outreach and application tracking.',
     tech: ['React', 'Express', 'PostgreSQL', 'Node.js', 'Tailwind'],
-    image: 'projects/education24.png',
+    image: '/projects/education24.png',
     liveUrl: 'https://education-24.com',
     githubUrl: 'https://github.com/francium10/education-24',
     featured: true,
@@ -30,7 +30,7 @@ const projects = [
     description: 'Full-stack data visualization platform processing large-scale datasets for regional water & sanitation infrastructure analysis in Zambia.',
     longDescription: 'Built comprehensive data visualization solution for the Eastern and Southern Africa Water and Sanitation organization, enabling stakeholders to analyze infrastructure metrics across regions using Python, React, and SQL databases.',
     tech: ['Python', 'React', 'SQL', 'D3.js', 'PostgreSQL'],
-    image: 'projects/esawas.png',
+    image: '/projects/esawas.png',
     liveUrl: 'https://esawas.org',
     githubUrl: 'https://github.com/francium10/esawas',
     featured: true,
@@ -97,24 +97,38 @@ export default function Projects() {
               key={project.title}
               className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center"
             >
-              {/* Project image placeholder */}
+              {/* Project image */}
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <div className="relative group">
                   <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-accent/20 to-warm/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative glass-card overflow-hidden rounded-xl aspect-video">
-                    {/* Placeholder gradient - replace with actual images */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate to-navy" />
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    {/* Actual project image */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      onError={(e) => {
+                        // Hide image on error and show fallback
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                    
+                    {/* Fallback gradient background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate to-navy -z-10" />
+                    <div className="absolute inset-0 flex items-center justify-center -z-10">
                       <span className="font-display text-lg sm:text-xl lg:text-2xl text-silver/50 px-4 text-center">
                         {project.title}
                       </span>
                     </div>
+                    
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <div className="flex gap-3 sm:gap-4">
                         {project.liveUrl && (
                           <a
                             href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="p-2 sm:p-3 bg-ivory rounded-full text-midnight hover:scale-110 transition-transform"
                             aria-label="View live site"
                           >
@@ -124,6 +138,8 @@ export default function Projects() {
                         {project.githubUrl && (
                           <a
                             href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="p-2 sm:p-3 bg-ivory rounded-full text-midnight hover:scale-110 transition-transform"
                             aria-label="View source code"
                           >
@@ -165,6 +181,8 @@ export default function Projects() {
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-accent hover:text-accent-light transition-colors text-sm sm:text-base"
                     >
                       <span>Live Demo</span>
@@ -174,6 +192,8 @@ export default function Projects() {
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-silver hover:text-ivory transition-colors text-sm sm:text-base"
                     >
                       <Github size={16} />
@@ -189,7 +209,7 @@ export default function Projects() {
         {/* Other projects grid */}
         <div>
           <h3 className="font-display text-xl sm:text-2xl font-bold text-ivory mb-6 sm:mb-8">
-            Other Notable Projects
+            Upcoming Projects & More
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {otherProjects.map((project) => (
@@ -205,6 +225,8 @@ export default function Projects() {
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-silver hover:text-accent transition-colors"
                         aria-label="View source"
                       >
@@ -214,6 +236,8 @@ export default function Projects() {
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-silver hover:text-accent transition-colors"
                         aria-label="View live"
                       >

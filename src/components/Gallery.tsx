@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { X, MapPin, Calendar } from 'lucide-react';
 
 const photos = [
   {
     id: 1,
-    src: '/public/photo1.jpg',
+    src: '/gallery/photo1.jpeg',
     alt: 'Francis at a tech conference',
     caption: 'Speaking at a biotech meetup',
     location: 'New York, NY',
@@ -14,7 +15,7 @@ const photos = [
   },
   {
     id: 2,
-    src: '/public/photo2.jpg',
+    src: '/gallery/photo2.jpg',
     alt: 'Francis working on a project',
     caption: 'Late night coding session',
     location: 'Yeshiva University',
@@ -22,7 +23,7 @@ const photos = [
   },
   {
     id: 3,
-    src: '/public/photo3.jpg',
+    src: '/gallery/photo3.jpg',
     alt: 'Francis traveling',
     caption: 'Exploring new places',
     location: 'Adventure Mode',
@@ -30,7 +31,7 @@ const photos = [
   },
   {
     id: 4,
-    src: '/public/photo4.jpg',
+    src: '/gallery/photo4.jpg',
     alt: 'Francis with team',
     caption: 'Building something great',
     location: 'Team Vibes',
@@ -70,23 +71,17 @@ export default function Gallery() {
                 index === 0 ? 'col-span-2 row-span-2' : ''
               }`}
             >
-              {/* Photo placeholder - replace with actual images */}
-              <div className={`w-full bg-gradient-to-br from-slate to-navy ${
+              {/* Photo */}
+              <div className={`w-full relative bg-slate ${
                 index === 0 ? 'aspect-square' : 'aspect-square'
               }`}>
-                {/* Placeholder content */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-silver/30 font-display text-sm sm:text-base text-center px-4">
-                    {photo.caption}
-                  </span>
-                </div>
-                
-                {/* Uncomment when you add real images */}
-                {/* <img 
+                <Image 
                   src={photo.src} 
                   alt={photo.alt}
-                  className="w-full h-full object-cover"
-                /> */}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes={index === 0 ? '(max-width: 768px) 100vw, 50vw' : '(max-width: 768px) 50vw, 25vw'}
+                />
               </div>
               
               {/* Hover overlay */}
@@ -122,28 +117,26 @@ export default function Gallery() {
           onClick={() => setSelectedPhoto(null)}
         >
           <button 
-            className="absolute top-4 right-4 p-2 text-silver hover:text-ivory transition-colors"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 text-silver hover:text-ivory transition-colors z-10"
             onClick={() => setSelectedPhoto(null)}
           >
-            <X size={24} />
+            <X size={28} />
           </button>
           
           <div 
             className="max-w-4xl w-full"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Image placeholder */}
-            <div className="w-full aspect-video bg-gradient-to-br from-slate to-navy rounded-xl sm:rounded-2xl mb-4 flex items-center justify-center">
-              <span className="text-silver/50 font-display text-lg">
-                {selectedPhoto.caption}
-              </span>
-              
-              {/* Uncomment when you add real images */}
-              {/* <img 
+            {/* Full size image */}
+            <div className="relative w-full aspect-[4/3] sm:aspect-video rounded-xl sm:rounded-2xl overflow-hidden mb-4">
+              <Image 
                 src={selectedPhoto.src} 
                 alt={selectedPhoto.alt}
-                className="w-full h-full object-contain rounded-2xl"
-              /> */}
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 80vw"
+                priority
+              />
             </div>
             
             <div className="text-center">
