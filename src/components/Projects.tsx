@@ -60,11 +60,11 @@ const projects = [
     title: 'VibeFinder 2.0',
     description: 'AI-powered music recommendation system with RAG pipeline, TF-IDF embeddings, and agentic critic. Built during CodePath AI110 with 199 passing tests and Streamlit UI.',
     category: 'AI/ML',
-    technologies: ['Python', 'LangChain', 'RAG', 'TF-IDF', 'Streamlit', 'Vector Store'],
+    tech: ['Python', 'LangChain', 'RAG', 'TF-IDF', 'Streamlit', 'Vector Store'],  // Changed from "technologies" to "tech"
     link: 'https://github.com/francium10/applied-ai-system-project',
     image: '/projects/vibefinder.png',
     color: 'from-purple-500 to-pink-500'
-  }
+  },
 ];
 
 export default function Projects() {
