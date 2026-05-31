@@ -38,9 +38,9 @@ export default function About() {
             Where Pharma Meets Code
           </h2>
           <p className="text-base sm:text-lg text-silver leading-relaxed">
-            I'm a pharmacist turned software developer on a mission to revolutionize 
-            how biotech startups navigate FDA regulations. With a Bachelor of Pharmacy 
-            from India and currently pursuing my MS in Biotechnology Management, I bring 
+            I'm a pharmacist turned software developer on a mission to revolutionize
+            how biotech startups navigate FDA regulations. With a Bachelor of Pharmacy
+            from India and currently pursuing my MS in Biotechnology Management, I bring
             a unique perspective to building tech solutions for the life sciences industry.
           </p>
         </div>
@@ -74,21 +74,21 @@ export default function About() {
             </h3>
             <div className="space-y-3 sm:space-y-4 text-silver leading-relaxed text-sm sm:text-base">
               <p>
-                My path started in pharmacy school in India, where I discovered my 
-                passion for solving complex problems. While studying drug formulations 
-                and pharmacology, I taught myself to code — starting with Python, 
+                My path started in pharmacy school in India, where I discovered my
+                passion for solving complex problems. While studying drug formulations
+                and pharmacology, I taught myself to code — starting with Python,
                 then moving to JavaScript and the MERN stack.
               </p>
               <p>
-                The intersection of these two worlds fascinated me: the pharmaceutical 
-                industry desperately needs better tech solutions, and I was uniquely 
-                positioned to build them. That realization led me to pursue my MS in 
+                The intersection of these two worlds fascinated me: the pharmaceutical
+                industry desperately needs better tech solutions, and I was uniquely
+                positioned to build them. That realization led me to pursue my MS in
                 Biotechnology Management at Yeshiva University.
               </p>
               <p>
-                Today, I'm building <span className="text-accent font-semibold">RegComplyAI</span>, 
-                an AI-powered platform that helps biotech startups navigate the complex 
-                FDA regulatory landscape. It's the tool I wish existed when I first 
+                Today, I'm building <span className="text-accent font-semibold">RegComplyAI</span>,
+                an AI-powered platform that helps biotech startups navigate the complex
+                FDA regulatory landscape. It's the tool I wish existed when I first
                 started learning about drug approvals.
               </p>
             </div>
@@ -117,7 +117,7 @@ export default function About() {
               </div>
               <div className="text-center">
                 <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold gradient-text mb-1 sm:mb-2">
-                  5
+                  five
                 </div>
                 <p className="text-silver text-xs sm:text-sm">Languages Spoken</p>
               </div>
