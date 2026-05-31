@@ -56,14 +56,15 @@ const projects = [
     category: 'Healthcare',
   },
   {
-    title: 'Pharma Supply Chain',
-    description: 'Blockchain-based solution prototype for tracking pharmaceutical supply chain integrity.',
-    tech: ['Solidity', 'React', 'Ethers.js', 'Hardhat', 'IPFS'],
-    image: '/projects/supplychain.png',
-    githubUrl: 'https://github.com/francium10',
-    featured: false,
-    category: 'Blockchain',
-  },
+    id: 'vibefinder',
+    title: 'VibeFinder 2.0',
+    description: 'AI-powered music recommendation system with RAG pipeline, TF-IDF embeddings, and agentic critic. Built during CodePath AI110 with 199 passing tests and Streamlit UI.',
+    category: 'AI/ML',
+    technologies: ['Python', 'LangChain', 'RAG', 'TF-IDF', 'Streamlit', 'Vector Store'],
+    link: 'https://github.com/francium10/applied-ai-system-project',
+    image: '/projects/vibefinder.png',
+    color: 'from-purple-500 to-pink-500'
+  }
 ];
 
 export default function Projects() {
