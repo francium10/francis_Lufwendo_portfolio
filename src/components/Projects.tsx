@@ -37,7 +37,7 @@ const projects = [
     category: 'Data Viz',
   },
   {
-    title: 'Drug Discovery ML Research',
+    title: 'Drug Interaction Checker',
     description: 'Published research on machine learning applications in pharmaceutical drug discovery, exploring neural network architectures for molecular property prediction.',
     longDescription: 'Co-authored publication in Modern Approaches in Drug Discovery exploring AI and machine learning applications in pharmaceutical R&D.',
     tech: ['Python', 'PyTorch', 'TensorFlow', 'scikit-learn', 'Pandas'],
@@ -74,7 +74,7 @@ export default function Projects() {
     <section id="projects" className="py-16 sm:py-24 lg:py-32 relative">
       {/* Background accent */}
       <div className="absolute top-1/2 left-0 w-48 sm:w-96 h-48 sm:h-96 bg-accent/5 rounded-full blur-3xl -translate-y-1/2" />
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-3xl mb-10 sm:mb-16">
@@ -85,7 +85,7 @@ export default function Projects() {
             Projects & Creations
           </h2>
           <p className="text-base sm:text-lg text-silver">
-            A selection of projects that showcase my work at the intersection of 
+            A selection of projects that showcase my work at the intersection of
             biotechnology and software development.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function Projects() {
                         (e.target as HTMLImageElement).style.display = 'none';
                       }}
                     />
-                    
+
                     {/* Fallback gradient background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-slate to-navy -z-10" />
                     <div className="absolute inset-0 flex items-center justify-center -z-10">
@@ -120,7 +120,7 @@ export default function Projects() {
                         {project.title}
                       </span>
                     </div>
-                    
+
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <div className="flex gap-3 sm:gap-4">
@@ -163,7 +163,7 @@ export default function Projects() {
                 <p className="text-silver mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   {project.longDescription || project.description}
                 </p>
-                
+
                 {/* Tech stack */}
                 <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
                   {project.tech.map((tech) => (

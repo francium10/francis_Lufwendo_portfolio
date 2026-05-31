@@ -15,9 +15,9 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     setIsSubmitting(false);
     setSubmitted(true);
     setFormData({ name: '', email: '', message: '' });
@@ -26,8 +26,8 @@ export default function Contact() {
   const socials = [
     {
       name: 'Email',
-      value: 'flufwendo@mail.yu.edu',
-      href: 'mailto:flufwendo@mail.yu.edu',
+      value: 'francis4lufwendo@gmail.com',
+      href: 'mailto:francis4lufwendo@gmail.com',
       icon: Mail,
     },
     {
@@ -48,7 +48,7 @@ export default function Contact() {
     <section id="contact" className="py-16 sm:py-24 lg:py-32 relative">
       {/* Background elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-accent/5 rounded-full blur-3xl" />
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
@@ -59,7 +59,7 @@ export default function Contact() {
             Let's Build Something Together
           </h2>
           <p className="text-base sm:text-lg text-silver px-4">
-            I'm actively seeking a software or biotech Summer 2026 internship.Let's connect!
+            Let's connect and collaborate this summer!
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export default function Contact() {
               <h3 className="font-display text-lg sm:text-xl font-bold text-ivory mb-4 sm:mb-6">
                 Contact Information
               </h3>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 {socials.map((social) => (
                   <a
@@ -107,8 +107,8 @@ export default function Contact() {
               <p className="text-silver mb-3 sm:mb-4 text-sm sm:text-base">
                 Prefer to schedule a call?
               </p>
-              <a 
-                href="https://meet.google.com/new" 
+              <a
+                href="https://meet.google.com/new"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary inline-flex text-sm sm:text-base"

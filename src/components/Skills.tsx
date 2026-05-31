@@ -1,15 +1,16 @@
 'use client';
 
-import { 
-  Code2, 
-  Database, 
-  Cloud, 
-  Beaker, 
-  Brain, 
+import {
+  Code2,
+  Database,
+  Cloud,
+  Beaker,
+  Brain,
   Wrench,
   Pill,
   FileText,
-  Users
+  Users,
+  Briefcase
 } from 'lucide-react';
 
 const skillCategories = [
@@ -32,6 +33,24 @@ const skillCategories = [
     color: 'accent',
   },
   {
+    title: 'Project Management',
+    icon: Briefcase,
+    skills: [
+      'Agile/Scrum',
+      'Work Breakdown Structure (WBS)',
+      'Gantt Charts & Scheduling',
+      'Budget Planning & Estimation',
+      'Risk Management',
+      'Stakeholder Management',
+      'Resource Allocation',
+      'Timeline & Delivery Management',
+      'Earned Value Management (EVM)',
+      'Requirements Gathering',
+      'Project Documentation',
+    ],
+    color: 'warm',
+  },
+  {
     title: 'AI & Data Science',
     icon: Brain,
     skills: ['PyTorch', 'TensorFlow', 'LangChain', 'RAG Systems', 'NLP', 'LLM Fine-tuning', 'Pandas'],
@@ -49,10 +68,11 @@ const skillCategories = [
     skills: ['CRISPR', 'Bioinformatics', 'Gene Therapy', 'Molecular Biology', 'Regulatory Affairs'],
     color: 'warm',
   },
+
 ];
 
 const tools = [
-  'VS Code', 'Figma', 'Postman', 'GitHub', 'Jira', 'Notion', 
+  'VS Code', 'Figma', 'Postman', 'GitHub', 'Jira', 'Notion', 'Cursor', 'Trello/Clickup',
   'Slack', 'ChatGPT/Claude', 'Excel/Sheets', 'Tableau'
 ];
 
@@ -79,7 +99,7 @@ export default function Skills() {
     <section id="skills" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] sm:w-[800px] h-[200px] sm:h-[400px] bg-accent/5 rounded-full blur-3xl" />
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-3xl mb-10 sm:mb-16">
@@ -90,7 +110,7 @@ export default function Skills() {
             Skills & Expertise
           </h2>
           <p className="text-base sm:text-lg text-silver">
-            A unique blend of pharmaceutical domain knowledge and modern software 
+            A unique blend of pharmaceutical domain knowledge and modern software
             development skills, positioned at the intersection of biotech and tech.
           </p>
         </div>
@@ -103,18 +123,17 @@ export default function Skills() {
               className="glass-card p-4 sm:p-6 card-lift group"
             >
               <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center ${
-                  category.color === 'accent' 
-                    ? 'bg-accent/10 text-accent' 
-                    : 'bg-warm/10 text-warm'
-                }`}>
+                <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center ${category.color === 'accent'
+                  ? 'bg-accent/10 text-accent'
+                  : 'bg-warm/10 text-warm'
+                  }`}>
                   <category.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <h3 className="font-display text-base sm:text-lg font-semibold text-ivory">
                   {category.title}
                 </h3>
               </div>
-              
+
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {category.skills.map((skill) => (
                   <span
@@ -175,9 +194,9 @@ export default function Skills() {
 
         {/* Target roles */}
         <div className="mt-10 sm:mt-16 text-center">
-          <p className="text-silver mb-3 sm:mb-4 text-sm sm:text-base">Looking for opportunities as</p>
+          <p className="text-silver mb-3 sm:mb-4 text-sm sm:text-base">Can collaborate on opportunities as</p>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
-            {['Technical Evangelist', 'Developer Advocate', 'Solutions Engineer', 'Product Manager'].map((role) => (
+            {['Technical Evangelist', 'Developer Advocate', 'Solutions Engineer', 'Technical Product Manager'].map((role) => (
               <span
                 key={role}
                 className="px-3 sm:px-5 py-1.5 sm:py-2 font-display font-medium text-accent border border-accent/30 rounded-full bg-accent/5 text-xs sm:text-base"

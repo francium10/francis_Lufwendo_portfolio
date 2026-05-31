@@ -79,7 +79,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-16 sm:py-24 lg:py-32 relative">
       <div className="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-warm/5 rounded-full blur-3xl" />
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-3xl mb-10 sm:mb-16">
@@ -90,7 +90,7 @@ export default function Experience() {
             Experience & Education
           </h2>
           <p className="text-base sm:text-lg text-silver">
-            My journey from pharmaceutical sciences to software development, 
+            My journey from pharmaceutical sciences to software development,
             with stops along the way that shaped my unique perspective.
           </p>
         </div>
@@ -107,16 +107,15 @@ export default function Experience() {
                   <div key={index} className="relative pl-10 sm:pl-20">
                     {/* Timeline dot */}
                     <div className="absolute left-2 sm:left-6 top-2 w-4 h-4 rounded-full bg-midnight border-2 border-accent" />
-                    
+
                     {/* Content */}
                     <div className="glass-card p-4 sm:p-6 card-lift">
                       <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-start sm:justify-between gap-2 sm:gap-4 mb-3 sm:mb-4">
                         <div>
-                          <span className={`inline-block px-2 py-1 text-xs font-mono rounded mb-2 ${
-                            exp.type === 'education' 
-                              ? 'text-warm bg-warm/10' 
-                              : 'text-accent bg-accent/10'
-                          }`}>
+                          <span className={`inline-block px-2 py-1 text-xs font-mono rounded mb-2 ${exp.type === 'education'
+                            ? 'text-warm bg-warm/10'
+                            : 'text-accent bg-accent/10'
+                            }`}>
                             {exp.type === 'education' ? 'Education' : 'Experience'}
                           </span>
                           <h3 className="font-display text-lg sm:text-xl font-semibold text-ivory">
@@ -129,7 +128,7 @@ export default function Experience() {
                           <p className="text-steel text-xs sm:text-sm">{exp.location}</p>
                         </div>
                       </div>
-                      
+
                       <p className="text-silver mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
                         {exp.description}
                       </p>
@@ -154,7 +153,7 @@ export default function Experience() {
             <h3 className="font-display text-lg sm:text-xl font-bold text-ivory mb-4 sm:mb-6">
               Achievements & Activities
             </h3>
-            
+
             {achievements.map((achievement, index) => (
               <div
                 key={index}
